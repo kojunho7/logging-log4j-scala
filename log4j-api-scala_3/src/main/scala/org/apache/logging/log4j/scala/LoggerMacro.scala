@@ -66,7 +66,7 @@ private object LoggerMacro {
                                throwable: Expr[Throwable])(using Quotes): Expr[Unit] = {
     val (messageFormat, args) = deconstructInterpolatedMessage(message)
     logMarkerMessageArgsThrowable(underlying, '{Level.TRACE}, marker, messageFormat, Expr.ofSeq(args), throwable)
-  }
+  }dfdfdfdf
 
   def traceObject(underlying: Expr[Logger], message: Expr[AnyRef])(using Quotes): Expr[Unit] = {
     '{ if ($underlying.delegate.isEnabled(Level.TRACE)) $underlying.trace($message) }
